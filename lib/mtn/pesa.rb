@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative "pesa/collection_token"
 require_relative "pesa/version"
 
 module Mtn
@@ -8,6 +9,8 @@ module Mtn
 
     def self.configuration
       @configuration ||= OpenStruct.new(
+        api_user: nil,
+        api_key: nil,
         enviroment: nil
       )
     end
